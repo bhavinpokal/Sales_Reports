@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF | {{ obj.name }}</title>
+    <style>
+        .image{
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ obj.name }}</h1>
+    <hr>
+    <img src="{{ obj.image.path }}" alt="{{ obj.name }}" class="image">
+    <br>
+    <h3>Remarks</h3>
+    <p>{{ obj.remarks }}</p>
+    <hr>
+    <p>Author: <b>{{ obj.author.user.username }}</b></p>
+    <p>Created at: <b>{{ obj.created_at }}</b></p>
+</body>
+</html>
